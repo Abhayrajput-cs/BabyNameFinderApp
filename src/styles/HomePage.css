@@ -1,0 +1,93 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-image: url('../assets/back.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh; 
+    color: white;
+  }
+  html, body {
+    height: 100%; 
+    margin: 0;
+    overflow: hidden;
+  }
+  .logo {
+    padding: 0px;
+    position: absolute;
+    top: 2px;
+    left: 2px; 
+    width: 130px;
+    margin-bottom: 2rem;
+  }
+  
+  
+  .welcome-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  }
+  
+  .welcome-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: blueviolet;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+  }
+  
+  .gender-selection {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .gender-card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gender-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gender-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .gender-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .gender-text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  

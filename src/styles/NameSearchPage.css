@@ -1,0 +1,181 @@
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f9f9f9;
+  background-image: url('../assets/background.jpg');
+}
+
+.name-grid {
+  display: flex; /* Use flexbox for the grid layout */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Ensure it takes full width */
+  padding: 0 20px; /* Add padding to the left and right */
+  margin-top: 20px; /* Add margin at the top to create space from the search box */
+}
+
+.name-item {
+  padding: 10px; /* Padding inside the name items */
+  font-size: 1.2rem;
+  color: #000000;
+  background-color: rgb(95, 231, 246);
+  margin: 5px; /* Space between name items */
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.2s, background-color 0.3s;
+  flex: 1 1 calc(20% - 10px); /* Flex item with some width, allowing for spacing */
+  max-width: 150px; /* Optional: set a max-width for the items */
+}
+
+.name-item:hover {
+  background-color: #cce7ff;
+  transform: scale(1.05);
+}
+
+.no-results {
+  background-color: #6bb823;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-top: 20px; 
+  text-align: center; }
+
+.search-title {
+  font-size: 2rem;
+  margin-top: 60px;
+  margin-bottom: 30%;
+  color: #1b3503;
+  position: absolute;
+}
+
+.search-box {
+  width: 60%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 2px solid #822323;
+  margin-bottom: 200px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+  position: fixed;
+}
+
+.search-box:focus {
+  border-color: #c21212;
+  outline: none;
+}
+
+.home-button {
+  position: absolute; /* Position it absolutely */
+  top: 40px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  color: rgb(0, 0, 0); /* Text color */
+  padding: 10px 10px;
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Font size */
+  transition: background 0.4s; /* Transition for hover effect */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.home-button:hover {
+  background-color: #57b87f; /* Darker blue on hover */
+  transform: scale(1.1);
+}
+
+/* Contribute Section at the Top-Right Corner */
+.contribute-section {
+  position: absolute;
+  top: 10px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  width: 300px; /* Fixed width */
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.contribute-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #1b3503;
+}
+
+.contribute-input {
+  width: 100%;
+  padding: 2px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.contribute-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #6bb823;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contribute-button:hover {
+  background-color: #57a017;
+}
+
+.contribution-message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #c21212;
+}
+/* Tooltip styling */
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120%); /* Adjust position slightly above the hovered item */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.name-item {
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #000000;
+  background-color: rgb(95, 231, 246);
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.2s, background-color 0.3s;
+  position: relative; /* To properly show tooltip */
+}
+
+.name-item:hover {
+  background-color: #cce7ff;
+  transform: scale(1.05);
+}
